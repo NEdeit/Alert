@@ -3,47 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>!</title>
+    <title>Error!</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #ffffff;  /* خلفية باللون الأحمر الفاتح */
+            font-family: 'Courier New', Courier, monospace;
+            background-color: black;  /* خلفية سوداء لتبدو الصفحة غريبة */
+            color: limegreen;  /* نص بلون أخضر لامع (يشبه النصوص على الشاشات القديمة) */
             margin: 0;
             padding: 0;
-            height: 100vh; /* اجعل الارتفاع 100% من الصفحة */
+            height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center; /* مركز المحتوى عموديًا وأفقيًا */
+            justify-content: center;
             position: relative;
+            overflow: hidden;
         }
 
         /* النص "خطأ في النظام 404" في الزاوية اليمنى */
         .error-text {
             position: absolute;
-            top: 20px;
-            right: 20px;
+            top: 10px;
+            right: 10px;
             font-size: 14px;
             color: red;
             font-weight: bold;
+            animation: blink 1s infinite;
         }
 
+        /* تأثير وميض للنص "خطأ في النظام 404" */
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        /* تأثير النص المشفر */
+        .encrypted-text {
+            font-size: 20px;
+            color: yellow;
+            margin-top: 20px;
+            animation: glitch 1s infinite;
+        }
+
+        /* تأثير الوميض للنصوص المشفرة */
+        @keyframes glitch {
+            0% { transform: skewX(10deg); opacity: 1; }
+            25% { transform: skewX(-10deg); opacity: 0.8; }
+            50% { transform: skewX(5deg); opacity: 1; }
+            75% { transform: skewX(-5deg); opacity: 0.8; }
+            100% { transform: skewX(0deg); opacity: 1; }
+        }
+
+        /* حركة النصوص */
+        .moving-text {
+            font-size: 18px;
+            color: red;
+            white-space: nowrap;
+            position: absolute;
+            top: 80%;
+            left: 100%;
+            animation: moveText 5s linear infinite;
+        }
+
+        /* حركة النصوص */
+        @keyframes moveText {
+            0% { left: 100%; }
+            100% { left: -100%; }
+        }
+
+        /* تأثير صورة */
         img {
-            width: 350px;  /* تغيير حجم الصورة */
-            height: auto;  /* الحفاظ على النسبة الأصلية */
-            margin-bottom: 10px;  /* مسافة صغيرة بين الصورة والنص */
+            width: 350px;
+            height: auto;
+            margin-bottom: 10px;
+            animation: shake 0.5s ease-in-out infinite;
         }
 
+        /* تأثير هز الصورة */
+        @keyframes shake {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            50% { transform: translateX(5px); }
+            75% { transform: translateX(-5px); }
+            100% { transform: translateX(5px); }
+        }
+
+        /* النص الرئيسي */
         h1 {
-            color: red;  /* لون النص الأحمر */
-            font-size: 30px;
+            color: red;
+            font-size: 36px;
             margin: 0;
+            animation: flicker 1s infinite;
         }
 
+        /* تأثير وميض للنص */
+        @keyframes flicker {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+
+        /* النص المساعد */
         p {
-            color: #000000;  /* النص الأسود */
-            font-size: 22px;
-            margin-top: 10px;  /* مسافة بين العنوان والنص */
+            color: white;
+            font-size: 18px;
+            animation: glitchText 1s infinite;
+        }
+
+        /* تأثيرات النص المساعد */
+        @keyframes glitchText {
+            0% { transform: skewX(5deg); opacity: 1; }
+            50% { transform: skewX(-5deg); opacity: 0.8; }
+            100% { transform: skewX(0deg); opacity: 1; }
         }
     </style>
 </head>
@@ -52,11 +124,21 @@
     <!-- النص "خطأ في النظام 404" في الزاوية اليمنى -->
     <div class="error-text">خطأ في النظام 404</div>
 
-    <!-- الصورة -->
+    <!-- النص المشفر -->
+    <div class="encrypted-text">#@#@!!01f23khlaf!%&amp;8asd9e0!@01@34</div>
+    <div class="encrypted-text">%%%****Error: Data Corruption Detected**!!@#</div>
+
+    <!-- النص المتحرك -->
+    <div class="moving-text">تحذير: اختراق جهازك! الوصول غير مصرح به!!</div>
+
+    <!-- الصورة التحذيرية -->
     <img src="https://i.imgur.com/2lDrgpO.png" alt="إنذار">
 
     <!-- النص "تم اختراق جهازك!" -->
     <h1>!تم اختراق جهازك</h1>
+
+    <!-- النص المساعد -->
+    <p>تم الوصول إلى بياناتك الشخصية. يقوم أحد لصوص الكمبيوتر بتتبع جميع أفعالك على هذا الجهاز.</p>
 
 </body>
 </html>
