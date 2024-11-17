@@ -20,25 +20,27 @@
             overflow: hidden;
         }
 
-        /* النص "خطأ في النظام 404" فوق الصورة مباشرة */
+        /* النص "خطأ في النظام 404" قريب من الصورة */
         .error-text {
             position: absolute;
-            top: 130px;  /* وضع النص فوق الصورة مباشرة */
-            font-size: 22px;  /* تكبير النص قليلاً */
+            top: 210px;  /* تقريب النص ليكون قريب من الصورة */
+            font-size: 20px;  /* تصغير الحجم ليكون مناسب */
             color: red;
             font-weight: bold;
             text-align: center;
             width: 100%;
         }
 
-        /* النصوص المشفرة في أعلى الصفحة */
+        /* النصوص المشفرة على اليسار */
         .encrypted-text {
             position: absolute;
             top: 20px;  /* تحديد مكان النصوص المشفرة في الأعلى */
-            font-size: 20px;
+            left: 10px;  /* محاذاة النصوص لليسار */
+            font-size: 18px;
             color: yellow;
-            width: 100%;
-            text-align: center;
+            width: auto;
+            text-align: left;
+            white-space: nowrap;
         }
 
         /* تأثير وميض للصورة */
@@ -56,9 +58,9 @@
             100% { opacity: 1; }
         }
 
-        /* النص "تم اختراق جهازك!" */
+        /* النص "تم اختراق جهازك!" بحجم متوسط */
         h1 {
-            font-size: 48px;  /* تكبير حجم النص "تم اختراق جهازك!" */
+            font-size: 36px;  /* تصغير الحجم ليكون متوسط */
             color: red;
             margin: 10px;
         }
@@ -74,18 +76,18 @@
 </head>
 <body>
 
-    <!-- النصوص المشفرة في أعلى الصفحة -->
+    <!-- النصوص المشفرة على اليسار -->
     <div class="encrypted-text">#@#@!!01f23khlaf!%&amp;8asd9e0!@01@34</div>
     <div class="encrypted-text">%%%****Error: Data Corruption Detected**!!@#</div>
 
     <!-- الصورة التحذيرية -->
     <img src="https://i.imgur.com/2lDrgpO.png" alt="إنذار">
 
-    <!-- النص "خطأ في النظام 404" فوق الصورة مباشرة -->
+    <!-- النص "خطأ في النظام 404" قريب من الصورة -->
     <div class="error-text">خطأ في النظام 404</div>
 
-    <!-- النص "تم اختراق جهازك!" تحت الصورة -->
-    <h1>!تم اختراق جهازك </h1>
+    <!-- النص "تم اختراق جهازك!" بحجم متوسط -->
+    <h1> !تم اختراق جهازك</h1>
 
   
 </body>
