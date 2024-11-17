@@ -3,38 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تحذير!</title>
+    <title>!</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #ffffff;  /* لون الخلفية */
-            padding-top: 50px;
-            color: #333333;  /* لون النص العام */
-            margin-top: 10px;  /* مسافة قليلة بين الصورة والعنوان */
+            background-color: #ffffff;  /* خلفية باللون الأحمر الفاتح */
+            margin: 0;
+            padding: 0;
+            height: 100vh; /* اجعل الارتفاع 100% من الصفحة */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center; /* مركز المحتوى عموديًا وأفقيًا */
+            position: relative;
+        }
 
+        /* النص "خطأ في النظام 404" في الزاوية اليمنى */
+        .error-text {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 14px;
+            color: red;
+            font-weight: bold;
+        }
 
-        }
-        h1 {
-            color: red;  /* لون العنوان باللون الأحمر */
-            font-size: 40px;
-            margin-top: 20px;  /* المسافة العليا */
-        }
-        p {
-            color: #000000;  /* اللون الأسود للنص */
-            font-size: 25px;
-        }
         img {
-            width: 350px;  /* زيادة حجم الصورة */
+            width: 350px;  /* تغيير حجم الصورة */
             height: auto;  /* الحفاظ على النسبة الأصلية */
-            margin-bottom: 5px;  /* المسافة بين الصورة والنص */
+            margin-bottom: 10px;  /* مسافة صغيرة بين الصورة والنص */
+        }
+
+        h1 {
+            color: red;  /* لون النص الأحمر */
+            font-size: 30px;
+            margin: 0;
+        }
+
+        p {
+            color: #000000;  /* النص الأسود */
+            font-size: 22px;
+            margin-top: 10px;  /* مسافة بين العنوان والنص */
         }
     </style>
 </head>
 <body>
-    <img src="https://imgur.com/2lDrgpO.png" alt="إنذار"> <!-- صورة التحذير في الأعلى -->
-    <h1>!تم اختراق جهازك </h1>  <!-- العنوان بالأحمر -->
-    <p>  يقوم احد لصوص الكمبيوتر بتتبع جميع أفعالك على هذا الجهاز </p>  <!-- النص بالأسود -->
-    <p>  !مطلوب اجراءات فورية          </p>
+
+    <!-- النص "خطأ في النظام 404" في الزاوية اليمنى -->
+    <div class="error-text">خطأ في النظام 404</div>
+
+    <!-- الصورة -->
+    <img src="https://i.imgur.com/2lDrgpO.png" alt="إنذار">
+
+    <!-- النص "تم اختراق جهازك!" -->
+    <h1>!تم اختراق جهازك</h1>
+
 </body>
 </html>
