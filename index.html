@@ -31,15 +31,16 @@
             width: 100%;
         }
 
-        /* النصوص المشفرة على اليسار */
+        /* النصوص المشفرة على اليسار وعلى أسطر متعددة */
         .encrypted-text {
             position: absolute;
-            top: 20px;  /* تحديد مكان النصوص المشفرة في الأعلى */
+            top: 40px;  /* تحديد مكان النصوص المشفرة في الأعلى */
+            left: 10px;  /* محاذاة النصوص لليسار */
             font-size: 18px;
             color: yellow;
-            width: auto;
             text-align: left;
-            white-space: nowrap;
+            white-space: normal;  /* السماح للنصوص بالانتقال إلى أسطر جديدة */
+            line-height: 1.6;  /* زيادة المسافة بين الأسطر */
         }
 
         /* تأثير وميض للصورة */
@@ -75,10 +76,14 @@
 </head>
 <body>
 
-    <!-- النصوص المشفرة على اليسار -->
-    <div class="encrypted-text">#@#@!!01ftfhgvuyfykt$$$23khlaf!%&amp;8asd9e0!@01@34</div>
-    <div class="encrypted-text">976e87tuiwe887vslhjsdErrorHackingProblem!!!!!</div>
-    <div class="encrypted-text">%%%****Error: Data Corruption Detected**!!@#</div>
+    <!-- النصوص المشفرة على اليسار وعلى أسطر متعددة -->
+    <div class="encrypted-text">
+        #@#@!!01ftfhgvuyfykt$$$23khlaf!%&amp;8asd9e0!@01@34<br>
+        976e87tuiwe887vslhjsdErrorHackingProblem!!!!!<br>
+        %%%****Error: Data Corruption Detected**!!@#<br>
+        !#32fa$#&*01h3@%@qwe@123!%&*1zsd<br>
+        !!!DataIntegrityFailure!!@#!!@#
+    </div>
 
     <!-- الصورة التحذيرية -->
     <img src="https://i.imgur.com/2lDrgpO.png" alt="إنذار">
@@ -87,8 +92,7 @@
     <div class="error-text">خطأ في النظام 404</div>
 
     <!-- النص "تم اختراق جهازك!" بحجم متوسط -->
-    <h1> !تم اختراق جهازك</h1>
+    <h1>!تم اختراق جهازك</h1>
 
-   
 </body>
 </html>
