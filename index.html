@@ -20,15 +20,25 @@
             overflow: hidden;
         }
 
-        /* النص "خطأ في النظام 404" فوق الصورة */
+        /* النص "خطأ في النظام 404" فوق الصورة مباشرة */
         .error-text {
             position: absolute;
-            top: 20px;  /* تحديد المسافة من الأعلى */
-            font-size: 20px;
+            top: 100px;  /* وضع النص فوق الصورة مباشرة */
+            font-size: 22px;  /* تكبير النص قليلاً */
             color: red;
             font-weight: bold;
             text-align: center;
             width: 100%;
+        }
+
+        /* النصوص المشفرة في أعلى الصفحة */
+        .encrypted-text {
+            position: absolute;
+            top: 20px;  /* تحديد مكان النصوص المشفرة في الأعلى */
+            font-size: 20px;
+            color: yellow;
+            width: 100%;
+            text-align: center;
         }
 
         /* تأثير وميض للصورة */
@@ -46,32 +56,4 @@
             100% { opacity: 1; }
         }
 
-        /* النصوص بدون تأثيرات حركية */
-        h1, p {
-            font-size: 24px;
-            color: red;
-            margin: 10px;
-        }
-
-        /* النصوص المساعده */
-        p {
-            color: white;
-            font-size: 18px;
-            margin-top: 10px;
-        }
-
-    </style>
-</head>
-<body>
-
-    <!-- النص "خطأ في النظام 404" فوق الصورة -->
-    <div class="error-text">خطأ في النظام 404</div>
-
-    <!-- الصورة التحذيرية -->
-    <img src="https://i.imgur.com/2lDrgpO.png" alt="إنذار">
-
-    <!-- النص "تم اختراق جهازك!" -->
-    <h1>!تم اختراق جهازك</h1>
-
-</body>
-</html>
+        /*
