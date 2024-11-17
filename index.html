@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Error!</title>
+    <title>ِError!</title>
     <style>
         body {
             font-family: 'Courier New', Courier, monospace;
@@ -20,125 +20,58 @@
             overflow: hidden;
         }
 
-        /* النص "خطأ في النظام 404" في الزاوية اليمنى */
+        /* النص "خطأ في النظام 404" فوق الصورة */
         .error-text {
             position: absolute;
-            top: 10px;
-            right: 10px;
-            font-size: 14px;
+            top: 20px;  /* تحديد المسافة من الأعلى */
+            font-size: 20px;
             color: red;
             font-weight: bold;
-            animation: blink 1s infinite;
+            text-align: center;
+            width: 100%;
         }
 
-        /* تأثير وميض للنص "خطأ في النظام 404" */
-        @keyframes blink {
-            0% { opacity: 1; }
-            50% { opacity: 0; }
-            100% { opacity: 1; }
-        }
-
-        /* تأثير النص المشفر */
-        .encrypted-text {
-            font-size: 20px;
-            color: yellow;
-            margin-top: 20px;
-            animation: glitch 1s infinite;
-        }
-
-        /* تأثير الوميض للنصوص المشفرة */
-        @keyframes glitch {
-            0% { transform: skewX(10deg); opacity: 1; }
-            25% { transform: skewX(-10deg); opacity: 0.8; }
-            50% { transform: skewX(5deg); opacity: 1; }
-            75% { transform: skewX(-5deg); opacity: 0.8; }
-            100% { transform: skewX(0deg); opacity: 1; }
-        }
-
-        /* حركة النصوص */
-        .moving-text {
-            font-size: 18px;
-            color: red;
-            white-space: nowrap;
-            position: absolute;
-            top: 80%;
-            left: 100%;
-            animation: moveText 5s linear infinite;
-        }
-
-        /* حركة النصوص */
-        @keyframes moveText {
-            0% { left: 100%; }
-            100% { left: -100%; }
-        }
-
-        /* تأثير صورة */
+        /* تأثير وميض للصورة */
         img {
-            width: 350px;
+            width: 450px;  /* تكبير الصورة */
             height: auto;
             margin-bottom: 10px;
-            animation: shake 0.5s ease-in-out infinite;
+            animation: blink 1s ease-in-out infinite;  /* إضافة تأثير وميض للصورة */
         }
 
-        /* تأثير هز الصورة */
-        @keyframes shake {
-            0% { transform: translateX(0); }
-            25% { transform: translateX(-5px); }
-            50% { transform: translateX(5px); }
-            75% { transform: translateX(-5px); }
-            100% { transform: translateX(5px); }
-        }
-
-        /* النص الرئيسي */
-        h1 {
-            color: red;
-            font-size: 36px;
-            margin: 0;
-            animation: flicker 1s infinite;
-        }
-
-        /* تأثير وميض للنص */
-        @keyframes flicker {
+        /* تأثير الوميض على الصورة */
+        @keyframes blink {
             0% { opacity: 1; }
-            50% { opacity: 0.5; }
+            50% { opacity: 0.3; }
             100% { opacity: 1; }
         }
 
-        /* النص المساعد */
+        /* النصوص بدون تأثيرات حركية */
+        h1, p {
+            font-size: 24px;
+            color: red;
+            margin: 10px;
+        }
+
+        /* النصوص المساعده */
         p {
             color: white;
             font-size: 18px;
-            animation: glitchText 1s infinite;
+            margin-top: 10px;
         }
 
-        /* تأثيرات النص المساعد */
-        @keyframes glitchText {
-            0% { transform: skewX(5deg); opacity: 1; }
-            50% { transform: skewX(-5deg); opacity: 0.8; }
-            100% { transform: skewX(0deg); opacity: 1; }
-        }
     </style>
 </head>
 <body>
 
-    <!-- النص "خطأ في النظام 404" في الزاوية اليمنى -->
+    <!-- النص "خطأ في النظام 404" فوق الصورة -->
     <div class="error-text">خطأ في النظام 404</div>
-
-    <!-- النص المشفر -->
-    <div class="encrypted-text">#@#@!!01f23khlaf!%&amp;8asd9e0!@01@34</div>
-    <div class="encrypted-text">%%%****Error: Data Corruption Detected**!!@#</div>
-
-    <!-- النص المتحرك -->
-    <div class="moving-text">تحذير: اختراق جهازك! الوصول غير مصرح به!!</div>
 
     <!-- الصورة التحذيرية -->
     <img src="https://i.imgur.com/2lDrgpO.png" alt="إنذار">
 
     <!-- النص "تم اختراق جهازك!" -->
     <h1>!تم اختراق جهازك</h1>
-
-    <!-- النص المساعد -->
-    <p>تم الوصول إلى بياناتك الشخصية. يقوم أحد لصوص الكمبيوتر بتتبع جميع أفعالك على هذا الجهاز.</p>
 
 </body>
 </html>
