@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ِError</title>
+    <title>Error</title>
     <style>
         body {
             font-family: 'Courier New', Courier, monospace;
@@ -23,7 +23,7 @@
         /* النص "خطأ في النظام 404" فوق الصورة مباشرة */
         .error-text {
             position: absolute;
-            top: 100px;  /* وضع النص فوق الصورة مباشرة */
+            top: 130px;  /* وضع النص فوق الصورة مباشرة */
             font-size: 22px;  /* تكبير النص قليلاً */
             color: red;
             font-weight: bold;
@@ -56,4 +56,37 @@
             100% { opacity: 1; }
         }
 
-        /*
+        /* النص "تم اختراق جهازك!" */
+        h1 {
+            font-size: 48px;  /* تكبير حجم النص "تم اختراق جهازك!" */
+            color: red;
+            margin: 10px;
+        }
+
+        /* النص المساعد */
+        p {
+            color: white;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- النصوص المشفرة في أعلى الصفحة -->
+    <div class="encrypted-text">#@#@!!01f23khlaf!%&amp;8asd9e0!@01@34</div>
+    <div class="encrypted-text">%%%****Error: Data Corruption Detected**!!@#</div>
+
+    <!-- الصورة التحذيرية -->
+    <img src="https://i.imgur.com/2lDrgpO.png" alt="إنذار">
+
+    <!-- النص "خطأ في النظام 404" فوق الصورة مباشرة -->
+    <div class="error-text">خطأ في النظام 404</div>
+
+    <!-- النص "تم اختراق جهازك!" تحت الصورة -->
+    <h1>!تم اختراق جهازك </h1>
+
+  
+</body>
+</html>
