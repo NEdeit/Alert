@@ -20,17 +20,6 @@
             overflow: hidden;
         }
 
-        /* النص "خطأ في النظام 404" قريب من الصورة */
-        .error-text {
-            position: absolute;
-            top: 210px;  /* تقريب النص ليكون قريب من الصورة */
-            font-size: 20px;  /* تصغير الحجم ليكون مناسب */
-            color: red;
-            font-weight: bold;
-            text-align: center;
-            width: 100%;
-        }
-
         /* النصوص المشفرة على اليسار وعلى أسطر متعددة */
         .encrypted-text {
             position: absolute;
@@ -45,7 +34,7 @@
 
         /* تأثير وميض للصورة */
         img {
-            width: 450px;  /* تكبير الصورة */
+            width: 350px;  /* تصغير الصورة */
             height: auto;
             margin-bottom: 10px;
             animation: blink 1s ease-in-out infinite;  /* إضافة تأثير وميض للصورة */
@@ -87,9 +76,6 @@
 
     <!-- الصورة التحذيرية -->
     <img src="https://i.imgur.com/2lDrgpO.png" alt="إنذار">
-
-    <!-- النص "خطأ في النظام 404" قريب من الصورة -->
-    <div class="error-text">خطأ في النظام 404</div>
 
     <!-- النص "تم اختراق جهازك!" بحجم متوسط -->
     <h1>!تم اختراق جهازك</h1>
